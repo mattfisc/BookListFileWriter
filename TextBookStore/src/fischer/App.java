@@ -49,6 +49,7 @@ public class App {
 	
 	/**
 	 * Launch the application.
+	 * @param args String array 
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -88,11 +89,16 @@ public class App {
 			
 	}
 	
+	/**
+	 * save_list function to save list to file object
+	 */
 	public void save_list() {
 		file.write_to_file();
 	}
 	
-	
+	/**
+	 * search_event function check search input field on click of search button.  search by sku number in list
+	 */
 	public void search_event() {
 		search_btn.addActionListener(new ActionListener() {
 
@@ -120,6 +126,10 @@ public class App {
 			
 		});
 	}
+	
+	/**
+	 * radio_btn_event function check radio btn click and sort by selection
+	 */
 	public void radio_btn_event() {
 		radiobtn0.addActionListener(new ActionListener() {
 
@@ -165,7 +175,9 @@ public class App {
 	}
 	
 
-	
+	/**
+	 * delete_event function event watch on button for delete book. opens window for input to delete by sku
+	 */
 	public void delete_event() {
 		delete_btn.addActionListener(new ActionListener() {
 
@@ -185,6 +197,9 @@ public class App {
 		});
 	}
 
+	/**
+	 * display_list function gets list and outputs to app and saves to file
+	 */
 	public void display_list() {
 		display.setText("SKU   Title   Price   Quantity");
 		for(int i = 0; i < BookList.booklist.size(); i++) {
@@ -198,6 +213,10 @@ public class App {
 		// SAVE LIST
 		save_list();
 	}
+	
+	/**
+	 * add_event function asks user for input for sku,title,price and adds book to list
+	 */
 	public void add_event() {
 		add_btn.addActionListener(new ActionListener() {
 

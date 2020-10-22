@@ -20,15 +20,12 @@ public class WriteFile {
 	private File file;
 	private String file_name;
 	
-	/**
-	 * WriteFile constructor creates and writes to a file
-	 */
 	public WriteFile() {
 		file_name = "list.txt";
 	}
 	
 	/**
-	 * hashToFile function write HashMap to file
+	 * write_to_file function use BookList and writes values to a file
 	 */
 	public void write_to_file() {
 		
@@ -44,7 +41,6 @@ public class WriteFile {
 						BookList.booklist.get(i).getQuantity() + "\n"
 						);
 			}
-			
 			fw.close();
 		}
 		catch(Exception e) {
@@ -54,6 +50,9 @@ public class WriteFile {
 		
 	}
 	
+	/**
+	 * read_from_file function reads file and stores in a LinkedList BookList.booklist
+	 */
 	public void read_from_file() {
 		
 			try {
@@ -82,17 +81,11 @@ public class WriteFile {
 					}catch(Exception err) {
 						err.printStackTrace();
 					}
-					
 				}
-				
-				
-				
+
 			}
 			catch(Exception e) {
 				e.printStackTrace();
 			}
-			
-			
 		}
-	
 }
